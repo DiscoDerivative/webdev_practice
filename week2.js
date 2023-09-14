@@ -80,3 +80,97 @@ function sum(){
 }
 
 sum(1, 2, 3);
+
+// Question 7
+
+// Question 8
+
+function generateName(libraryName){
+    console.log(`${libraryName}.js`);
+    return `${libraryName}.js`;
+}
+
+generateName("library");
+
+// Question 9
+
+function multipleOfThree(check){
+    if(check % 3 == 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+// Question 10
+
+function checkBetween(number1, middle, number2){
+    if(middle > number1 && middle < number2 || middle < number1 && middle > number2){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+// Question 11
+
+function taxes(purchase){
+    return purchase * 0.13;
+}
+
+// Question 12
+
+function subtractDiscount(total, percentage){
+    if(percentage <= 0){
+        return total;
+    }
+
+    else{
+        return total - (total * (percentage / 100));
+    }
+}
+
+// Question 13
+
+function daysHoursMinutes(seconds){
+    let day = Math.floor(seconds / 86400);
+    let hour = Math.floor((seconds % 86400) / 3600);
+    let minute = Math.floor(((seconds % 86400) % 3600) / 60);
+    
+    console.log(`${day} Days, ${hour} Hours, ${minute} Minutes`);
+}
+
+daysHoursMinutes(3600);
+
+// Question 14
+
+function time(seconds){
+    let day = Math.floor(seconds / 86400);
+    let hour = Math.floor((seconds % 86400) / 3600);
+    let minute = Math.floor(((seconds % 86400) % 3600) / 60);
+    
+        if(day === 1){
+        console.log(`${day} Day`);
+        }
+        else if(day > 1){
+            console.log(`${day} Days`);
+        }
+
+        if(hour === 1){
+            console.log(`${hour} Hours`);
+            }
+            else if(hour > 1){
+                console.log(`${hour} Hours`);
+            }
+
+            if(minute === 1){
+                console.log(`${minute} Minute`);
+                }
+                else if(day > 1){
+                    console.log(`${minute} Minutes`);
+                }
+    }
+
+time(86461);
