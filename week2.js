@@ -174,3 +174,71 @@ function time(seconds){
     }
 
 time(86461);
+
+//Function that returns the number of matches found in first arg and remaining arguments
+
+function findMatches(base, ...test){
+    let sum = 0;
+    for(i = 0; i < test.length; i ++){
+        if(base === test[i]){
+            sum = sum + 1;
+        }
+    }
+    return sum;
+}
+
+console.log(findMatches(66, 1, 345, 2334, 66, 67, 66));
+
+
+//Function that logs all arguments greater than 255
+
+function showOutsideByteRange(...values){
+    for(let i = 0; i < values.length; i++){
+        if(values[i] > 255){
+            console.log(values[i]);
+        }
+    }
+}
+
+showOutsideByteRange(1, 5, 233, 255, 256, 0);
+
+//Function that takes a string and returns its value encoded for use in a URL
+
+function prepareString(string){
+    let encoded = encodeURIComponent(string);
+    console.log(encoded);
+}
+
+prepareString("hello world");
+
+//Write an enclosing function that takes any number of string arguments and reutrns them in encoded form concatenated together
+
+function buildQueryString(...string){
+    let encode;
+    let storeEncodedInfo = [];
+    for(i = 0; i < string.length; i++){
+       encode = encodeURIComponent(string[i]);
+       storeEncodedInfo.push(encode);
+    }
+
+    let join = storeEncodedInfo.join('&');
+    let finishedString = `?$${join}`;
+    return finishedString;
+}
+
+//Function that takes a function, followed by any amt of numbers and applies the function to all numbers returning the total
+
+function applyFn(...num){
+
+    function func(value){
+        return value * value;
+    } 
+
+    let add = 0;
+    for(let i = 0; i < num.length; i++){
+        add += func(num[i]);
+    }
+    return add;
+}
+
+console.log(applyFn(1, 2, 3));
