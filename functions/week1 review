@@ -1,0 +1,260 @@
+//WEEK 1
+
+//1
+
+var label = "senecacollege";
+var tld = "ca";
+var domainName = label + '.' + tld;
+console.log(domainName);
+
+//2
+
+var isSeneca;
+
+if(domainName === 'senecacollege.ca'){
+    isSeneca = true;
+}
+else {
+    isSeneca = false;
+}
+
+console.log(isSeneca);
+
+//3
+
+var isNotSeneca
+
+if(isSeneca === true){
+    isNotSeneca = false;
+}
+else{
+    isNotSeneca = true;
+}
+
+console.log(isNotSeneca);
+
+//4
+
+var byte1 = 192, byte2 = 168, byte3 = 2, byte4 = 1;
+
+//5
+console.log(byte1.toString()); // 10
+console.log(byte1.toString(2)); //1010 (binary)
+console.log(byte1.toString(16)); // hexadecimal
+
+//6
+
+var ipAddress = byte1 + '.' + byte2 + '.' + byte3 + '.' + byte4;
+console.log(ipAddress)
+
+//7
+
+var ipInt = byte1 << 24 + byte2 << 16 + byte3 << 8 + byte4;
+console.log(ipInt);
+
+//8
+
+var ipBinary = ipInt.toString(2);
+
+//9 
+
+var statusCode = 418; //teapot is 418
+
+//10
+
+if(statusCode > 399 && statusCode < 500){
+    console.log("A valid 4xx status code");
+}
+
+//11
+
+switch(statusCode){
+
+    case 100: console.log("100 - Continue");
+        break;
+    case 101: console.log("101 - Switching Protocols");
+        break;
+    case 102: console.log("102 - Processing");
+        break;
+    case 103: console.log("103 - Early Hints");
+        break;
+}
+
+//12
+
+function is2xx(status){
+    if(status > 199 && status < 300){
+        return true;
+    }
+}
+
+//13 
+
+var studentName = "Margaret"
+var studentAge = 19;
+
+console.log(`${studentName} is ${studentAge} years old.`);
+
+//14
+
+var isEven;
+var num = 5;
+
+if(num % 2 === 0){
+    isEven = true;
+}
+
+else{
+    isEven = false;
+}
+
+console.log(isEven);
+
+//15
+
+var isOdd;
+
+if(isEven === true){
+    isOdd = false;
+}
+else{
+    isOdd = true;
+}
+
+//16
+
+function calculateArea (radius){
+    return Math.PI * (radius * radius);
+}
+
+console.log(calculateArea(1));
+
+//17
+
+function celsiusToFahrenheit (celsius){
+    var fahrenheit = celsius * (9/5) + 32;
+    return fahrenheit;
+}
+
+//18
+
+function feetToMetres (feet){
+    var metres = feet * 0.3048;
+    return metres;
+}
+
+//19
+
+function toMinutesAndSeconds (seconds){
+    var minutes = Math.floor(seconds / 60);
+    var remainingSeconds = seconds % 60;
+
+    console.log(`${minutes} minute(s) and ${remainingSeconds} second(s)`);
+}
+
+toMinutesAndSeconds(90);
+
+//20
+
+var score = 10;
+var grade;
+
+if(score > 89 && score < 100){
+    grade = 'A';
+}
+
+else if (score > 79 && score < 81){
+    grade = 'B';
+}
+
+else if(score > 69 && score < 71){
+    grade = 'C';
+}
+
+else if(score > 59 && score < 61){
+    grade = 'D';
+}
+
+else if(score < 60){
+    grade = 'F';
+}
+
+//21
+
+var day;
+
+switch(day){
+    case 1: console.log('Weekday');
+        break;
+    case 2: console.log('Weekday');
+        break;
+    case 3: console.log('Weekday');
+        break;
+    case 4: console.log('Weekday');
+        break;
+    case 5: console.log('Weekday');
+        break;
+    case 6: console.log('Weekend');
+        break;
+    case 7: console.log('Weekend');
+        break;
+}
+
+//22
+
+function isPositive(num){
+    if(num > 0){
+        return true;
+    }
+    return false;
+}
+
+//23
+
+function isLeapYear(year){
+    if(year % 4 == 0 || ((year % 100 !== 0) && (year % 400 === 0))){
+        console.log("A leap year.");
+    }
+    else{
+        console.log("Not a leap year.");
+    }
+}
+
+isLeapYear(2012);
+
+//24
+
+function getDayOfWeek(day){
+    switch(day){
+        case 1: console.log("Monday");
+            break;
+        case 2: console.log("Tuesday");
+            break;
+        case 3: console.log("Wednesday");
+            break;
+        case 4: console.log("Thursday");
+            break;
+        case 5: console.log("Friday");
+            break;
+        case 6: console.log("Saturday");
+            break;
+    }
+}
+
+//25
+
+function getFullName(firstname, lastname){
+    return firstname + ' ' + lastname;
+}
+
+//26
+
+function getCircleRadius(radius){
+    return Math.PI * (radius * radius);
+}
+
+//27
+
+function getHypotenuse(a, b){
+    return Math.sqrt((a * a) + (b * b));
+}
